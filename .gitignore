@@ -31,3 +31,4 @@ hs_err_pid*
 TicTacToeSuper.iml
 out/
 src/
+!/src/TicTacToe.java
