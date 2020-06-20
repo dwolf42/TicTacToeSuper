@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
 # Compiled class file
-#*.class
+*.class
 
 # Log file
 *.log
@@ -26,7 +26,7 @@ hs_err_pid*
 
 # my ignore
 .idea/
-TicTacToeSuper.iml
-#out/
-#src/
-#!/src/TicTacToe.java
+*.iml
+out/
+src/
+!/src/TicTacToe.java
