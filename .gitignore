@@ -29,6 +29,6 @@ hs_err_pid*
 .idea/misc.xml
 .idea/modules.xml
 TicTacToeSuper.iml
-out/
-src/
-!/src/TicTacToe.java
+#out/
+#src/
+#!/src/TicTacToe.java
