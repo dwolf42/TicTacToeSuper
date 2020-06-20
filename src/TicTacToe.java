@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class TicTacToe {
     static Scanner scanner = new Scanner(System.in);
-    static int player = 1;
+    static boolean flag = getAndValidatePlayerInput();
+    static int player = playerSwitcher( 1);
     static String playerInput;
     static String regex = "[ABC][1-3]\\s[XO]";
 
@@ -19,15 +20,16 @@ public class TicTacToe {
     static char c3 = '_';
 
 
+
     public static void main(String[] args) {
+
+
         while (checkSlots()) {
             printPlayingfield();
             playTurnMessage();
+            getAndValidatePlayerInput();
         }
-
-        boolean flag = getAndValidatePlayerInput();
-
-        System.out.println("Flag Status == " + flag);
+        gameOver();
 
     }
 
@@ -78,10 +80,28 @@ public class TicTacToe {
         playerInput = scanner.nextLine();
 
         if (!playerInput.toUpperCase().matches(regex)) {
-            // flag = false;
             return false;
         }
         return true;
+    }
+
+    public static void wrongInput() {
+        while (!flag) {
+            System.out.println("\nInvalid move! Only enter letters A-C, followed by numbers 1-3, followed by a space, followed by letters X or O.");
+            System.out.println("Please try again player " + player + ":");
+            playerInput = scanner.nextLine();
+            if (playerInput.toUpperCase().matches(regex)) {
+
+                break;
+            }
+        }
+    }
+
+    public static int playerSwitcher(int a) {
+        if (a == 1) {
+            return 2;
+        }
+        return 1;
     }
 
     public static void gameOver() {
