@@ -6,7 +6,7 @@ While following a tutorial track on Hyperskill.org to develop a simple TicTacToe
 written in Java I've started to push the basic tutorial a litte further.
 
 I tuned the appearance of the playing field, implemented a 2d array to store both,
-the values borders and lines of the playing field, as well as the actual
+the values of the borders and lines of the playing field, as well as the actual
 playing slots where player 1 and player 2 may place their symbols.
 
 Basic playing field:
