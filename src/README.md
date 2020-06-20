@@ -27,8 +27,8 @@ C| _ _ _ |
 ```
 
 Now the game will tell which players turn it is, prints the whole playing field before
-every turn, tells you how to play and notifies you about an invalid move made. 
-To match every move I've added a Regex to the code, so only valid moves accepted
+every turn, tells you how to play, and notifies you about an invalid move made. 
+To match every move I've added a Regex to the code, so only valid moves are accepted
 by the game.
 
 In order to make a valid move you have to enter the row A B C, followed by the columns
@@ -39,6 +39,7 @@ Valid:
 A1 O
 B3 X
 C2 X
+etc.
 ```
 Invalid:
 ```
@@ -47,7 +48,7 @@ B O1
 Any other format as shown under valid.
 ```
 
-**Note:** Games does not check if the slot has already been occupied by a symbol.
+**Note:** Games does not check if a slot has already been occupied by a symbol.
 
 
 As I love video games I also added an actual Game Over screen to the end of the game
