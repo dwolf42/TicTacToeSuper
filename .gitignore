@@ -25,8 +25,11 @@
 hs_err_pid*
 
 # my ignore
-.idea/
+*.idea/
 *.iml
 out/
 src/
 !/src/TicTacToe.java
+grandle.xml
+*.iws
+workspace.xml
