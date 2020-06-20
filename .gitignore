@@ -25,9 +25,7 @@
 hs_err_pid*
 
 # my ignore
-.idea/.gitignore
-.idea/misc.xml
-.idea/modules.xml
+.idea/
 TicTacToeSuper.iml
 #out/
 #src/
