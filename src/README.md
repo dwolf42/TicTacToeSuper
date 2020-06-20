@@ -1,5 +1,6 @@
-In the Super version of the game I'm trying to put every part of the code into methods
-for studying reasons. TicTacToeSuper is currently under development and unstable.
+**In the Super version of the game I'm trying to put every part of the code into methods
+for studying reasons, therefore TicTacToeSuper is currently under development 
+and unstable.**
 
 While following a tutorial track on Hyperskill.org to develop a simple TicTacToe game
 written in Java I've started to push the basic tutorial a litte further.
