@@ -24,16 +24,26 @@ public class TicTacToe {
 
     public static void main(String[] args) {
 
-        boolean flag = getAndValidatePlayerInput();
+   //    boolean flag = getAndValidatePlayerInput();
 
         while (checkSlots() == true) {
 
             printPlayingfield();
             playTurnMessage();
-            getAndValidatePlayerInput();
+            if (getAndValidatePlayerInput() == false) {
+                wrongInput();
+            } else {
+                if (player == 1) {
+                    player = 2;
+                } else {
+                    player = 1;
+                }
+                columnACheck();
+
+            }
+
         }
         gameOver();
-
     }
 
 
@@ -90,7 +100,7 @@ public class TicTacToe {
     }
 
     public static void wrongInput() {
-        while (!flag) {
+        while (getAndValidatePlayerInput() == false) {
             System.out.println("\nInvalid move! Only enter letters A-C, followed by numbers 1-3, followed by a space, followed by letters X or O.");
             System.out.println("Please try again player " + player + ":");
             playerInput = scanner.nextLine();
