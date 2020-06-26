@@ -27,18 +27,21 @@ public class TicTacToe {
    //    boolean flag = getAndValidatePlayerInput();
 
         while (checkSlots() == true) {
-
+System.out.println("\nStep 2");
             printPlayingfield();
+System.out.println("\nStep 4");
             playTurnMessage();
             if (getAndValidatePlayerInput() == false) {
                 wrongInput();
             } else {
+
                 if (player == 1) {
+                    System.out.println("\nStep 6");
                     player = 2;
                 } else {
                     player = 1;
                 }
-                columnACheck();
+                columnCheck();
 
             }
 
@@ -48,6 +51,7 @@ public class TicTacToe {
 
 
     public static boolean checkSlots() {
+        System.out.println("\nStep 1");
 
         if ((a1 == '_') || (a2 == '_') || (a3 == '_')
                 || (b1 == '_') || (b2 == '_') || (b3 == '_')
@@ -81,9 +85,11 @@ public class TicTacToe {
             }
             System.out.print(ticSuper[row][column] + "\n");
         }
+System.out.println("\nStep 3");
     }
 
     public static void playTurnMessage() {
+System.out.println("\nStep 5");
         // How to play, call player whose turn it is and ask for input
         System.out.println("\nValid formats: A1 X or b3 o");
         System.out.println("It's player " + player + "'s turn!");
@@ -112,11 +118,51 @@ public class TicTacToe {
     }
 
     public static int playerSwitcher(int a) {
+
         if (a == 1) {
             return 2;
         }
         return 1;
     }
+
+    public static void columnCheck() {
+        // column 'a' check
+        if (playerInput.toLowerCase().charAt(0) == 'a') {
+            // assigning value to the related position on the array
+            if (playerInput.charAt(1) == '1') {
+                a1 = playerInput.toUpperCase().charAt(3);
+            } else if (playerInput.charAt(1) == '2') {
+                a2 = playerInput.toUpperCase().charAt(3);
+            } else if (playerInput.charAt(1) == '3') {
+                a3 = playerInput.toUpperCase().charAt(3);
+            }
+        }
+
+        // column 'b' check
+        if (playerInput.toLowerCase().charAt(0) == 'b') {
+            // assigning value to the related position on the array
+            if (playerInput.charAt(1) == '1') {
+                b1 = playerInput.toUpperCase().charAt(3);
+            } else if (playerInput.charAt(1) == '2') {
+                b2 = playerInput.toUpperCase().charAt(3);
+            } else if (playerInput.charAt(1) == '3') {
+                b3 = playerInput.toUpperCase().charAt(3);
+            }
+        }
+
+        // column 'c' check
+        if (playerInput.toLowerCase().charAt(0) == 'c') {
+            // assigning value to the related position on the array
+            if (playerInput.charAt(1) == '1') {
+                c1 = playerInput.toUpperCase().charAt(3);
+            } else if (playerInput.charAt(1) == '2') {
+                c2 = playerInput.toUpperCase().charAt(3);
+            } else if (playerInput.charAt(1) == '3') {
+                c3 = playerInput.toUpperCase().charAt(3);
+            }
+        }
+    }
+
 
     public static void gameOver() {
         // After game finishes / all slots occupied
