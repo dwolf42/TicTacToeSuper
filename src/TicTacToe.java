@@ -1,10 +1,9 @@
 import java.util.Scanner;
-import java.util.regex.*;
 
 public class TicTacToe {
     static Scanner scanner = new Scanner(System.in);
 
-    static int player = playerSwitcher( 1);
+    static int player = playerSwitcher(2);
     static String playerInput;
     static String regex = "[ABC][1-3]\\s[XO]";
 
@@ -20,21 +19,14 @@ public class TicTacToe {
     static char c2 = '_';
     static char c3 = '_';
 
-
-
     public static void main(String[] args) {
 
-   //    boolean flag = getAndValidatePlayerInput();
-
         while (checkSlots() == true) {
-System.out.println("\nStep 2");
             printPlayingfield();
-System.out.println("\nStep 4");
             playTurnMessage();
             if (getAndValidatePlayerInput() == false) {
                 wrongInput();
             } else {
-
                 if (player == 1) {
                     System.out.println("\nStep 6");
                     player = 2;
@@ -49,10 +41,8 @@ System.out.println("\nStep 4");
         gameOver();
     }
 
-
     public static boolean checkSlots() {
         System.out.println("\nStep 1");
-
         if ((a1 == '_') || (a2 == '_') || (a3 == '_')
                 || (b1 == '_') || (b2 == '_') || (b3 == '_')
                 || (c1 == '_') || (c2 == '_') || (c3 == '_')) {
@@ -85,11 +75,9 @@ System.out.println("\nStep 4");
             }
             System.out.print(ticSuper[row][column] + "\n");
         }
-System.out.println("\nStep 3");
     }
 
     public static void playTurnMessage() {
-System.out.println("\nStep 5");
         // How to play, call player whose turn it is and ask for input
         System.out.println("\nValid formats: A1 X or b3 o");
         System.out.println("It's player " + player + "'s turn!");
@@ -98,7 +86,6 @@ System.out.println("\nStep 5");
 
     public static boolean getAndValidatePlayerInput() {
         playerInput = scanner.nextLine();
-
         if (!playerInput.toUpperCase().matches(regex)) {
             return false;
         }
@@ -111,14 +98,12 @@ System.out.println("\nStep 5");
             System.out.println("Please try again player " + player + ":");
             playerInput = scanner.nextLine();
             if (playerInput.toUpperCase().matches(regex)) {
-
                 break;
             }
         }
     }
 
     public static int playerSwitcher(int a) {
-
         if (a == 1) {
             return 2;
         }
@@ -163,10 +148,10 @@ System.out.println("\nStep 5");
         }
     }
 
-
     public static void gameOver() {
         // After game finishes / all slots occupied
-        System.out.println("--------------");
+        printPlayingfield();
+        System.out.println("\n--------------");
         System.out.println("Game Over! \ud83d\ude38");
         System.out.println("--------------");
     }
