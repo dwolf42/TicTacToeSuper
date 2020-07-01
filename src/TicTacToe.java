@@ -34,15 +34,13 @@ public class TicTacToe {
                     player = 1;
                 }
                 columnCheck();
-
             }
-
         }
         gameOver();
     }
 
     public static boolean checkSlots() {
-        System.out.println("\nStep 1");
+        // System.out.println("\nStep 1");
         if ((a1 == '_') || (a2 == '_') || (a3 == '_')
                 || (b1 == '_') || (b2 == '_') || (b3 == '_')
                 || (c1 == '_') || (c2 == '_') || (c3 == '_')) {
@@ -55,17 +53,18 @@ public class TicTacToe {
             /* This 2 dimensional array stores the basic look of the playing field, as well as the locations
                where moves can be placed and also stores the actual move as long as the game's running.
 
-               ◜--1-2-3-◝
+               >--1-2-3-<
                A| _ _ _ |
                B| _ _ _ |    <-- The default playing field appearance. Corners are written in unicode.
                C| _ _ _ |
-               ◟--------◞
+               >--------<
+               \u25DC, \u25DD, \u25DF, \u25DE
              */
-        char[][] ticSuper = {{'\u25DC', '-', '-', '1', '-', '2', '-', '3', '-', '\u25DD'},
+        char[][] ticSuper = {{'>', '-', '-', '1', '-', '2', '-', '3', '-', '<'},
                 {'A', '|', ' ', a1, ' ', a2, ' ', a3, ' ', '|'},
                 {'B', '|', ' ', b1, ' ', b2, ' ', b3, ' ', '|'},
                 {'C', '|', ' ', c1, ' ', c2, ' ', c3, ' ', '|'},
-                {'\u25DF', '-', '-', '-', '-', '-', '-', '-', '-', '\u25DE'},
+                {'>', '-', '-', '-', '-', '-', '-', '-', '-', '<'},
         };
 
         for (int row = 0; row < 5; row++) {
@@ -150,9 +149,10 @@ public class TicTacToe {
 
     public static void gameOver() {
         // After game finishes / all slots occupied
+        // Cat emoji \ud83d\ude38
         printPlayingfield();
         System.out.println("\n--------------");
-        System.out.println("Game Over! \ud83d\ude38");
+        System.out.println("Game Over! :-P");
         System.out.println("--------------");
 
     }
