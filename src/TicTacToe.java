@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class TicTacToe {
     static Scanner scanner = new Scanner(System.in);
 
-    static int player = playerSwitcher(2);
+    static int player;
     static String playerInput;
     static String regex = "[ABC][1-3]\\s[XO]";
 
@@ -24,20 +24,16 @@ public class TicTacToe {
         while (checkSlots() == true) {
             printPlayingfield();
             playTurnMessage();
-            if (getAndValidatePlayerInput() == false) {
+            if (validatePlayerInput() == false) {
                 wrongInput();
             } else {
-                if (player == 1) {
-                    System.out.println("\nStep 6");
-                    player = 2;
-                } else {
-                    player = 1;
-                }
+                playerSwitcher();
                 columnCheck();
             }
         }
         gameOver();
     }
+
 
     public static boolean checkSlots() {
         // System.out.println("\nStep 1");
@@ -83,8 +79,12 @@ public class TicTacToe {
         System.out.println("Enter: ");
     }
 
-    public static boolean getAndValidatePlayerInput() {
+    public static String getPlayerInput() {
         playerInput = scanner.nextLine();
+        return playerInput;
+    }
+
+    public static boolean validatePlayerInput() {
         if (!playerInput.toUpperCase().matches(regex)) {
             return false;
         }
@@ -92,21 +92,22 @@ public class TicTacToe {
     }
 
     public static void wrongInput() {
-        while (getAndValidatePlayerInput() == false) {
+        while (validatePlayerInput() == false) {
             System.out.println("\nInvalid move! Only enter letters A-C, followed by numbers 1-3, followed by a space, followed by letters X or O.");
             System.out.println("Please try again player " + player + ":");
-            playerInput = scanner.nextLine();
+            getPlayerInput();
             if (playerInput.toUpperCase().matches(regex)) {
                 break;
             }
         }
     }
 
-    public static int playerSwitcher(int a) {
-        if (a == 1) {
-            return 2;
+    public static void playerSwitcher() {
+        if (player == 1) {
+            player = 2;
+        } else {
+        player = 1;
         }
-        return 1;
     }
 
     public static void columnCheck() {
