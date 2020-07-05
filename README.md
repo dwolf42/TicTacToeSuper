@@ -83,8 +83,7 @@ by the game.
 
 Enough said, let's jump right into the game ;-)
 
-Snitgit
-<br></br>
-  * [get in touch with me](https://github.com/SnitgitTheGitsnit)
+Snitgit  
+* [get in touch with me](https://github.com/SnitgitTheGitsnit)
   
-  Game icon: https://www.flaticon.com/authors/those-icons
+Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com </a>
