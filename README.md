@@ -86,3 +86,5 @@ Enough said, let's jump right into the game ;-)
 Snitgit
 <br></br>
   * [get in touch with me](https://github.com/SnitgitTheGitsnit)
+  
+  Game icon: https://www.flaticon.com/authors/those-icons
