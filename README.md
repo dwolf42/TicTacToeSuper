@@ -1,5 +1,5 @@
-#TicTacToeSuper  
-######by Snitgit the Gitsnit  
+**TicTacToeSuper**  
+by Snitgit the Gitsnit  
   
 <br>**1. How to run the game:**  
 Step 1 - Make sure you installed the lastest version of Java.
