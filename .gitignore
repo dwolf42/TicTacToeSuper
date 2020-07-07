@@ -28,8 +28,8 @@ hs_err_pid*
 *.idea/
 *.iml
 out/
-src/
-!/src/TicTacToe.java
+#src/
+#!/src/TicTacToeSuper.java
 grandle.xml
 *.iws
 workspace.xml

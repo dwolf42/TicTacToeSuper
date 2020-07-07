@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 
-public class TicTacToe {
+public class TicTacToeSuper {
     static Scanner scanner = new Scanner(System.in);
 
     static int player = 1;
@@ -158,5 +158,6 @@ public class TicTacToe {
         System.out.println("\n--------------");
         System.out.println("Game Over! :-P");
         System.out.println("--------------");
+        playerInput = scanner.nextLine();
     }
 }

@@ -48,7 +48,7 @@ There is also an easter-egg implemented. Do you think you can catch it? :-)
 
 <br>**3. How I wrote 3TSuper:**
 
-While following a tutorial track on Hyperskill.org to develop a simple TicTacToe game
+While following a tutorial track on Hyperskill.org to develop a simple TicTacToeSuper game
 written in Java I've started to push the basic tutorial a byte further than
 originally intended by JetBrains.
 

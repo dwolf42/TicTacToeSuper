@@ -2,7 +2,7 @@
 for studying reasons, therefore TicTacToeSuper is currently under development 
 and unstable.**
 
-While following a tutorial track on Hyperskill.org to develop a simple TicTacToe game
+While following a tutorial track on Hyperskill.org to develop a simple TicTacToeSuper game
 written in Java I've started to push the basic tutorial a litte further.
 
 I tuned the appearance of the playing field, implemented a 2d array to store both,
