@@ -18,6 +18,7 @@
 *.nar
 *.ear
 *.zip
+!/TicTacToeSuper.zip
 *.tar.gz
 *.rar
 
@@ -28,8 +29,9 @@ hs_err_pid*
 *.idea/
 *.iml
 out/
-#src/
-#!/src/TicTacToeSuper.java
+src/
+!/src/TicTacToeSuper.java
 grandle.xml
 *.iws
 workspace.xml
+
