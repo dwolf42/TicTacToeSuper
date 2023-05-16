@@ -76,7 +76,7 @@ Ejoy ;-)
 
 Kabraxis
 
-get in touch with me: https://github.com/Kabraxis
+get in touch with me: https://github.com/dwolf42
 
 Credits:
 Icons made by https://www.flaticon.com/authors/those-icons
